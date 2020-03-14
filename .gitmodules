@@ -1,0 +1,3 @@
+[submodule "library/webextensions-examples"]
+	path = library/webextensions-examples
+	url = https://github.com/mdn/webextensions-examples.git
