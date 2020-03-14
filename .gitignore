@@ -2,7 +2,7 @@
 *.py[cod]
 .venv
 .hypothesis
-
+.envrc
 # ide
 .#*
 .idea
