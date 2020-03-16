@@ -5,6 +5,13 @@
 
 APP_NAME = handytool
 
+init-react-app:
+	npx create-react-app $(APP_NAME)
+
+init-react-addon:
+	npm install babel-cli@6 babel-preset-react-app@3
+
+
 sign:
 	web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
 

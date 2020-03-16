@@ -1,3 +1,9 @@
 [submodule "library/webextensions-examples"]
 	path = library/webextensions-examples
 	url = https://github.com/mdn/webextensions-examples.git
+[submodule "library/react-redux-realworld"]
+	path = library/react-redux-realworld
+	url = https://github.com/gothinkster/react-redux-realworld-example-app
+[submodule "library/react"]
+	path = library/react
+	url = https://github.com/facebook/react/
