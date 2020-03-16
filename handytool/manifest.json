@@ -1,10 +1,18 @@
 {
-
-  "description": "Adds a solid red border to all webpages matching mozilla.org. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#borderify",
+  "description": "This is a simple tool to do REST API calls to services that automate my ebsuring experience",
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "Handytool",
   "version": "1.0",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/borderify",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "kris@handytool",
+      "strict_min_version": "48.0"
+    }
+  },
+
+
   "icons": {
     "48": "icons/border-48.png"
   },
@@ -14,6 +22,38 @@
       "matches": ["*://*.mozilla.org/*"],
       "js": ["borderify.js"]
     }
+  ],
+
+  "__comment": "Options for plugin",
+  "options_ui": {
+    "page": "options/options_page.html",
+    "browser_style": true
+  },
+
+  "__comment": "background scripts that are loaded at start and run in background",
+  "background": {
+    "scripts": ["background/context_menus.js", "background/commands.js"],
+     "page": "background-page.html"
+  },
+
+  "__comment": "commands is stuff defined and watched for in background script",
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Alt+Shift+U",
+        "linux": "Ctrl+Shift+U"
+      },
+      "description": "Send a 'toggle-feature' event to the extension"
+    }
+  },
+
+  "__comment": "permissions to access webpages, hosts and certain functions",
+  "permissions": [
+    "*://developer.mozilla.org/*",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "contextMenus"
   ]
 
 }
