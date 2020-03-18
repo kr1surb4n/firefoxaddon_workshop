@@ -1,6 +1,7 @@
 {
   "description": "This is a simple tool to do REST API calls to services that automate my ebsuring experience",
   "manifest_version": 2,
+  "default_locale": "en",
   "name": "Handytool",
   "version": "1.0",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/borderify",
@@ -17,26 +18,19 @@
     "48": "icons/border-48.png"
   },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
-    }
-  ],
+  "user_scripts": {
+    "api_script": "static/js/jquery-3.4.1.min.js"
+  },
 
-  "__comment": "Options for plugin",
   "options_ui": {
     "page": "options/options_page.html",
     "browser_style": true
   },
 
-  "__comment": "background scripts that are loaded at start and run in background",
   "background": {
-    "scripts": ["background/context_menus.js", "background/commands.js"],
-     "page": "background-page.html"
+    "scripts": ["static/js/jquery-3.4.1.min.js", "background/context_menus.js", "background/commands.js"]
   },
 
-  "__comment": "commands is stuff defined and watched for in background script",
   "commands": {
     "toggle-feature": {
       "suggested_key": {
@@ -47,9 +41,11 @@
     }
   },
 
-  "__comment": "permissions to access webpages, hosts and certain functions",
   "permissions": [
-    "*://developer.mozilla.org/*",
+    "<all_urls>",
+    "*://localhost:8000/*",
+    "*://127.0.0.1:8000/*",
+    "tabs",
     "webRequest",
     "webRequestBlocking",
     "storage",

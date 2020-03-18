@@ -1,0 +1,11 @@
+{
+    "scrape_url_title": {
+        "message": "Send page url to processing",
+        "description": "Name of the extension."
+    },
+
+    "log_selection_title": {
+        "message": "Send selected text to processing",
+        "description": "Name of the extension."
+    }
+}

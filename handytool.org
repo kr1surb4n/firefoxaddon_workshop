@@ -1,1 +1,26 @@
-* 
+* handytool
+
+this will be a tool for adding actions to what i do on web in
+firefox. this plugin will be the skeleton for other plugins.
+it's purpose will be to automate my web surfing
+
+** what i need:
+*** options page
+with 
+- url to api
+- token to api
+- or creditentials to api
+
+*** context menu item
+- an action in context menu
+- this action will be a generic one
+
+*** extension page OPTIONAL
+- a page where you can add new context items TO_CHECK
+- history of operations TO_CHECK
+*** notification OPTIONAL
+- to get notifications if some job is done TO_CHECK 
+
+
+* kanban
+
